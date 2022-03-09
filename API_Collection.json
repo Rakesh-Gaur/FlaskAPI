@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "4a2aaa99-8e2a-4f2e-a868-853195df2cf9",
+		"name": "flask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post_API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"roll_no\":103,\n    \"name\": \"Michael\",\n    \"gender\": \"male\",\n    \"nationality\": \"US\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/insert_data",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"insert_data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student data by Roll no and name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "roll_no",
+						"type": "text",
+						"value": "3"
+					},
+					{
+						"key": "name",
+						"type": "text",
+						"value": "khusbu"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/get_student?roll_no=104&name=Michael",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"get_student"
+					],
+					"query": [
+						{
+							"key": "roll_no",
+							"value": "104"
+						},
+						{
+							"key": "name",
+							"value": "Michael"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Student_Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/get_data",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"get_data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/delete_data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/delete_data",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"delete_data"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://127.0.0.1:5000"
+		}
+	]
+}

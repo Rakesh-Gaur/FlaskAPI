@@ -1,0 +1,6 @@
+APScheduler
+elasticsearch
+Faker
+Flask
+requests
+urllib3
